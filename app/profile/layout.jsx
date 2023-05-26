@@ -6,12 +6,10 @@ import SkeletonProfileCard from "@components/skeleton/SkeletonProfileCard";
 import "@styles/globals.css";
 import { useEffect, useState } from "react";
 
-// import { Providers } from "./redux/provider";
-
-export const metadata = {
-  title: "Promptopia",
-  description: "Discover & Share AI Prompts",
-};
+// export const metadata = {
+//   title: "Promptopia",
+//   description: "Discover & Share AI Prompts",
+// };
 
 const profileLayout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
