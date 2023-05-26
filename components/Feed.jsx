@@ -31,7 +31,7 @@ const Feed = ({
   const frequency = {};
 
   // Step 2-3: Count the frequency of the specified tag
-  allPosts.map((item) => {
+  allPosts?.map((item) => {
     const tag = item.tag.trim().toLowerCase();
     frequency[tag] = (frequency[tag] || 0) + 1;
   });

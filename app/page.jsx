@@ -106,7 +106,7 @@ const Home = () => {
         </div>
       )}
 
-      {allPosts.length == 0 ? (
+      {allPosts?.length == 0 ? (
         <SkeletonCardList />
       ) : (
         <Feed
