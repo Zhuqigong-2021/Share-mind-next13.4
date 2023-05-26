@@ -28,7 +28,7 @@ const Home = () => {
     // fetchPosts();
 
     dispatch(fetchPosts());
-    setAllPosts(posts);
+    if (posts.length !== 0) setAllPosts(posts);
   }, [dispatch, posts.length]);
 
   const filterPrompts = (searchtext) => {
@@ -63,7 +63,7 @@ const Home = () => {
 
   return (
     <section className="w-full flex-center flex-col  ">
-      {allPosts.length == 0 ? (
+      {allPosts?.length == 0 ? (
         <SkeletonHero />
       ) : (
         <div className="background-video absolute top-0 left-0 right-0 sm:pt-0 md:pt-36  z-[10] flex-center flex-col ">
