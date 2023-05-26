@@ -5,7 +5,7 @@ import Provider from "@components/Provider";
 import { Providers } from "./redux/provider";
 
 export const metadata = {
-  title: "Promptopia",
+  title: "ShareMind",
   description: "Discover & Share AI Prompts",
 };
 
