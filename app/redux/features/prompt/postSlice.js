@@ -7,7 +7,8 @@ import {
 } from "@reduxjs/toolkit";
 
 // import { sub } from "date-fns";
-import axios from "axios";
+
+import axiosInstance from "@utils/axiosInstance";
 
 const POSTS_URL = "/api/prompt";
 
@@ -20,9 +21,11 @@ const initialState = {
   error: null,
   posts: [],
 };
+
+// Apply retry-axios middleware
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
   try {
-    const response = await axios.get(POSTS_URL);
+    const response = await axiosInstance.get(POSTS_URL);
     console.log(response.data);
     return response.data;
   } catch (err) {
