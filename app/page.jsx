@@ -94,7 +94,7 @@ const Home = () => {
             creation, and exchange of creative prompts
           </p>
 
-          <form className="relative sm:w-1/3 w-full mt-0  md:scale-100 md:mt-5 lg:scale-100 lg:mt-5 px-4 ">
+          <form className="relative sm:w-1/3 w-full translate-y-[-20px] md:translate-y-0 lg:translate-y-0 scale-75  md:scale-100 md:mt-5 lg:scale-100 lg:mt-5 px-4 ">
             <input
               type="text"
               placeholder="Search for a tag or a username"
