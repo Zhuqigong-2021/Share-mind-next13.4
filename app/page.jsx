@@ -78,10 +78,11 @@ const Home = () => {
               <source src="/assets/videos/particle.mp4" type="video/mp4" />
             </video>
           </div>
-          <h1 className="head_text text-center ">
-            <span className=" textshadow">Explore & Share</span>
+          <h1 className="head_text text-center scale-50 md:scale-100 lg:scale-100 mb-0 pb-0 flex-wrap ">
+            {/* text-2xl mb-0 sm:text-5xl md:text-5xl */}
+            <span className=" textshadow text-center  ">Explore & Share</span>
             <br className="max-md:hidden" />
-            <span className="orange_gradient text-center ">
+            <span className="orange_gradient text-center min-w-[300px] ">
               {" "}
               AI-Generated Idea
             </span>
@@ -93,7 +94,7 @@ const Home = () => {
             creation, and exchange of creative prompts
           </p>
 
-          <form className="relative sm:w-1/3 w-full mt-10 px-4 ">
+          <form className="relative sm:w-1/3 w-full mt-0  md:scale-100 md:mt-5 lg:scale-100 lg:mt-5 px-4 ">
             <input
               type="text"
               placeholder="Search for a tag or a username"

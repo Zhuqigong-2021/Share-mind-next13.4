@@ -212,7 +212,7 @@
 
 .head_text {
   /* @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl; */
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black;
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black max-w-full;
 }
 
 .orange_gradient {
@@ -267,7 +267,7 @@
 
 /* Nav Component */
 .logo_text {
-  @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
+  @apply sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
 }
 
 .dropdown {
