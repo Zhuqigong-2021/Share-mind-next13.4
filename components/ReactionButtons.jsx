@@ -8,9 +8,7 @@ import {
   AiFillHeart,
 } from "react-icons/ai";
 import { useEffect, useState } from "react";
-// import { reactionAdded } from "@app/redux/features/prompt/promptSlice";
 import { useSession } from "next-auth/react";
-// import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 const ReactionButtons = ({ post }) => {
   const { data: session } = useSession();
