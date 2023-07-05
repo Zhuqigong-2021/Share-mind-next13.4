@@ -1,4 +1,5 @@
 "use client";
+import useSWR from "swr";
 import Feed from "@components/Feed";
 import { useState, useEffect } from "react";
 import { selectAllPosts } from "./redux/features/prompt/postSlice";
@@ -8,9 +9,12 @@ import { ToastContainer } from "react-toastify";
 import SkeletonCardList from "@components/skeleton/SkeletonCardList";
 import SkeletonHero from "@components/skeleton/SkeletonHero";
 import { useDispatch, useSelector } from "react-redux";
+
 const Home = () => {
   const posts = useSelector(selectAllPosts);
   const dispatch = useDispatch();
+  const fetcher = (url) => fetch(url).then((res) => res.json());
+  const { data } = useSWR("/api/prompt", fetcher);
   const [allPosts, setAllPosts] = useState([]);
 
   // Search states
@@ -24,12 +28,18 @@ const Home = () => {
   //   setAllPosts(data);
   // };
 
+  // console.log("data:", data);
   useEffect(() => {
     // fetchPosts();
+    // setAllPosts([data]);
 
-    dispatch(fetchPosts());
-    if (posts.length !== 0) setAllPosts(posts);
-  }, [dispatch, posts.length]);
+    // dispatch(fetchPosts());
+
+    // if (posts.length !== 0) setAllPosts(data);
+    if (data) {
+      setAllPosts(data);
+    }
+  }, [data]);
 
   const filterPrompts = (searchtext) => {
     const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
